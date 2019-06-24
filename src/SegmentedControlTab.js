@@ -138,21 +138,20 @@ export default class SegmentedControlTab extends PureComponent<Props> {
       activeTabOpacity,
       enabled,
     } = this.props
-    const firstTabStyleDefault = [
+    const firstTabStyle = [
       {
-        borderRightWidth: values && values.length === 2 ? 1 : 0,
+        borderRightWidth: 1,
         borderTopLeftRadius: borderRadius,
-        borderBottomLeftRadius: borderRadius,
-      },
-    ]
-    const lastTabStyleDefault = [
+        borderBottomLeftRadius: borderRadius
+      }
+    ];
+    const lastTabStyle = [
       {
-        borderLeftWidth: 0,
+        borderLeftWidth: 1,
         borderTopRightRadius: borderRadius,
-        borderBottomRightRadius: borderRadius,
-      },
-    ]
-
+        borderBottomRightRadius: borderRadius
+      }
+    ];
     const tabsContainerStyles = [styles.tabsContainerStyle, tabsContainerStyle]
     if (!enabled) {
       tabsContainerStyles.push(tabsContainerDisableStyle)
